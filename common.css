@@ -10,7 +10,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  margin: 0;
+  margin: 20px;
 }
 
 :root {
@@ -49,7 +49,7 @@ a,
 .link {
   display: block;
   font-size: 18px;
-  text-decoration: none;
+  /* text-decoration: none; */
   /* color: inherit; */
 }
 
