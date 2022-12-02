@@ -47,6 +47,7 @@ p {
 
 a,
 .link {
+  display: block;
   font-size: 18px;
   text-decoration: none;
   /* color: inherit; */
