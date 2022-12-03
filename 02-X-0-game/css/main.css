@@ -23,12 +23,12 @@
   transition: background 0.1s;
 }
 
-.item:hover {
+/* .item:hover {
   background-color: #f1f1f10c;
-}
+} */
 
 .box {
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
   background-color: red;
 }
