@@ -12,8 +12,11 @@ const winVars = [
   [1, 5, 9],
   [3, 5, 7],
 ];
-const playerX = [];
-const playerO = [];
+let winVar = [];
+let playerX = [];
+let playerO = [];
+let currentPlayer = playerX;
+let numberOfSteps = 0;
 
 for (let i = 1; i <= 9; i += 1) {
   markup += `<div class="item" data-id=${i}></div>`;
@@ -25,20 +28,60 @@ content.addEventListener('click', onItemClick);
 function onItemClick(e) {
   if (!e.target.textContent) {
     e.target.textContent = player;
-    if (player === 'X') {
-      playerX.push(e.target.dataset.id);
-      if (winVars.every((winVar) => playerX.includes(winVar))) {
-        console.log('winner: ', playerX);
-      }
+
+    setPlayerInput(currentPlayer, e.target);
+
+    console.log(playerO.length + playerX.length);
+
+    winVar = checkWinVars(currentPlayer);
+    if (winVar) {
+      colorWinFields(winVar);
+      window.setTimeout(showWinMessage, 100);
     } else {
-      playerO.push(e.target.dataset.id);
+      currentPlayer = player === 'X' ? playerO : playerX;
+      player = player === 'X' ? 'O' : 'X';
     }
 
-    player = player === 'X' ? 'O' : 'X';
+    numberOfSteps = playerO.length + playerX.length;
+    if (numberOfSteps >= 9) {
+      window.setTimeout(showDeadHeatMessage, 100);
+    }
   }
-  console.log('playerX: ', playerX);
-  console.log('playerO: ', playerO);
-  //   console.log(e.target);
-  //   console.log(e.target.textContent);
-  //   console.log(e.target.dataset.id);
+}
+
+function checkWinVars(arrPlayer) {
+  // return winVars.some((elem) => elem.every((num) => arrPlayer.includes(num)));
+  return winVars.find((elem) => elem.every((num) => arrPlayer.includes(num)));
+}
+
+function setPlayerInput(player, eventTarget) {
+  player.push(Number(eventTarget.dataset.id));
+}
+
+function colorWinFields(winArr) {
+  winArr.forEach((element) => {
+    content.children[element - 1].classList.add('box');
+  });
+  return true;
+}
+
+function showWinMessage() {
+  alert(`Player ${player} is winner!!!`);
+  resetGameField();
+}
+
+function showDeadHeatMessage() {
+  alert(' DEAD HEAT. Try again...');
+  resetGameField();
+}
+
+function resetGameField() {
+  console.log('Reset field');
+  content.innerHTML = markup;
+  player = 'X';
+  winVar = [];
+  playerX = [];
+  playerO = [];
+  currentPlayer = playerX;
+  numberOfSteps = 0;
 }
