@@ -1,5 +1,12 @@
 # js-dom
 
-1. Copy/paste template folder and rename it.
-2. Rename <head> => <title>New name</title>.
-3. Add link <a href="./new-name/index.html">New name</a> in main index.html
+1. Кожна папка - окремий проект.
+2. В провіднику склонувати папку template і дати їй нове ім'я.
+3. Відкрити в VSCode.
+4. Змінити назву проекту в <head> => <title>New name</title>.
+5. В кореневому index.html додати посилання з новою назвою:
+   <a href="./new-name/index.html">New name</a>
+
+В common.css містяться загальні наляштування сторінки як приклад.
+Кожна папка-прект містить свій README.md для окремого опису.
+Live Server при зміні проекту перевантажувати не потрібно.
