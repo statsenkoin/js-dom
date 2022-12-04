@@ -31,8 +31,6 @@ function onItemClick(e) {
 
     setPlayerInput(currentPlayer, e.target);
 
-    console.log(playerO.length + playerX.length);
-
     winVar = checkWinVars(currentPlayer);
     if (winVar) {
       colorWinFields(winVar);
@@ -76,7 +74,7 @@ function showDeadHeatMessage() {
 }
 
 function resetGameField() {
-  console.log('Reset field');
+  // console.log('Reset field');
   content.innerHTML = markup;
   player = 'X';
   winVar = [];
