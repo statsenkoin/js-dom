@@ -1,34 +1,36 @@
 /* ========== Загальні налаштування ========== */
 
 /* modern normalize перебиває */
-html {
+/* html {
   box-sizing: border-box;
-}
-*,
+} */
+
+/* *,
 *::before,
 *::after {
   box-sizing: inherit;
-}
+} */
+
 body {
-  margin: 20px;
+  margin: 20px 40px;
 }
 
-:root {
+/* :root {
   --background-color: #ffffff;
   --main-text-color: #212121;
   --accent-color: tomato;
   --main-font: Roboto, sans-serif;
-}
+} */
 
-body {
+/* body {
   background-color: var(--background-color);
   color: var(--main-text-color);
   font-family: var(--main-font);
   font-size: 14px;
   letter-spacing: 0.03em;
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -36,56 +38,56 @@ h5,
 h6,
 p {
   margin: 0;
-}
+} */
 
 /* ul, ol, */
-.list {
+/* .list {
   list-style: none;
   padding-left: 0;
   margin: 0;
-}
+} */
 
-a,
-.link {
+a {
   display: block;
-  font-size: 18px;
+  font-size: 24px;
+  /* margin-top: 20px; */
   /* text-decoration: none; */
   /* color: inherit; */
 }
 
-img {
+/* img {
   display: block;
   max-width: 100%;
   height: auto;
-}
+} */
 
 /* або через клас .footer-address */
 /* address {
   font-style: normal;
 } */
 
-button {
+/* button {
   display: block;
   margin: 0 auto;
-  cursor: pointer;
-  /* (прибрати, якщо є modern normalize) */
-  /* font-family: var(--main-font); */
+  cursor: pointer; */
+/* (прибрати, якщо є modern normalize) */
+/* font-family: var(--main-font);
   border: none;
   border-radius: 4px;
-}
+} */
 
 /* .section {
   padding-top: 100px;
   padding-bottom: 100px;
 } */
 
-.container {
-  /* width: 1200px; */
+/* .container {
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-}
+} */
 
 /* =========================================== */
 /* =============== Компоненти ================ */
