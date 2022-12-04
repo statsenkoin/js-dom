@@ -12,3 +12,68 @@ a {
 }
 
 /* ------------------------------- */
+
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  outline: auto;
+  margin-top: 20px;
+  padding: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.output-color {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.items1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #aaa;
+  transition: scale 100ms linear;
+}
+
+.item1:hover {
+  scale: 1.05;
+}
+
+.items2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+
+.item2-wrapper {
+  padding: 10px;
+  width: 210px;
+  outline: auto;
+  border-radius: 10px;
+  margin-inline: auto;
+  background-color: beige;
+}
+
+.item2-button {
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 10px;
+  transition: transform 200ms linear;
+}
+
+.item2-button:hover {
+  transform: perspective(400px) rotateX(10deg);
+}
