@@ -1,0 +1,14 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px 40px;
+}
+
+a {
+  display: block;
+  font-size: 24px;
+}
+
+/* ------------------------------------------ */
